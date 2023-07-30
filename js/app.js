@@ -17,7 +17,7 @@ if (ScrollTrigger.isTouch !== 1) {
         trigger: ".hero-section",
         start: "center",
         end: "820",
-        scrub: 1,
+        scrub: true,
       },
     }
   );
@@ -35,7 +35,7 @@ if (ScrollTrigger.isTouch !== 1) {
           trigger: item,
           start: "-850",
           end: "-100",
-          scrub: 1,
+          scrub: true,
         },
       }
     );
@@ -54,7 +54,7 @@ if (ScrollTrigger.isTouch !== 1) {
           trigger: item,
           start: "-750",
           end: "top",
-          scrub: 1,
+          scrub: true,
         },
       }
     );
@@ -75,7 +75,7 @@ if (ScrollTrigger.isTouch !== 1) {
             trigger: item,
             start: "-750",
             end: "top",
-            scrub: 1,
+            scrub: true,
           },
         }
       );
@@ -90,7 +90,7 @@ if (ScrollTrigger.isTouch !== 1) {
             trigger: item,
             start: "-750",
             end: "top",
-            scrub: 1,
+            scrub: true,
           },
         }
       );
@@ -103,7 +103,7 @@ if (ScrollTrigger.isTouch !== 1) {
     gsap.fromTo(
       item,
       { height: "0", opacity: 0, },
-      { height: "auto", opacity: 1,  scrollTrigger: {  trigger: item, start: "-900", end: "top",  scrub: 1  }}
+      { height: "auto", opacity: 1,  scrollTrigger: {  trigger: item, start: "-900", end: "top",  scrub: true  }}
     );
   });
   let sections = gsap.utils.toArray(".about");

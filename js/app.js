@@ -106,17 +106,17 @@ if (ScrollTrigger.isTouch !== 1) {
       { height: "auto", opacity: 1,  scrollTrigger: {  trigger: item, start: "-900", end: "top",  scrub: true  }}
     );
   });
-
-  //   gsap.to(sections, {
-  //     xPercent: -100 * (sections.length - 1),
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: ".apps",
-  //       pin: true,
-  //       scrub: 1,
-  //       snap: 1 / (sections.length - 1),
-  // 		start: "-30%",
-  //       end: () => "+=" + document.querySelector(".apps").offsetWidth,
-  //     },
-  //   });
+  let sections = gsap.utils.toArray(".about");
+    gsap.to(sections, {
+      xPercent: -101 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".about-section",
+        pin: true,
+        scrub: 1,
+        snap: 1 / (sections.length - 1),
+  		// start: "-30%",
+        end: () => "+=" + document.querySelector(".about-section").offsetWidth,
+      },
+    });
 }
